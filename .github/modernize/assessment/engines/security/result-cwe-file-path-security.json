@@ -1,0 +1,86 @@
+{
+  "timestamp": "",
+  "execution_time_seconds": 0,
+  "analysis_method": "LLM",
+  "status": "success",
+  "result": {
+    "values": [
+      {
+        "storyPoint": 8,
+        "severity": "optional",
+        "category": "File & Path Security",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "description": "The product uses external input to construct a pathname that is intended to identify a file or directory that is located underneath a restricted parent directory, but the product does not properly neutralize special elements within the pathname that can cause the pathname to resolve to a location that is outside of the restricted directory.",
+        "status": "NOT_FOUND",
+        "id": "CWE-22"
+      },
+      {
+        "storyPoint": 5,
+        "severity": "optional",
+        "category": "File & Path Security",
+        "name": "Relative Path Traversal",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize sequences such as .. that can resolve to a location that is outside of that directory.",
+        "status": "NOT_FOUND",
+        "id": "CWE-23"
+      },
+      {
+        "storyPoint": 5,
+        "severity": "optional",
+        "category": "File & Path Security",
+        "name": "Absolute Path Traversal",
+        "evidence": {
+          "files": [],
+          "explanation": ""
+        },
+        "description": "The product uses external input to construct a pathname that should be within a restricted directory, but it does not properly neutralize absolute path sequences such as /abs/path that can resolve to a location that is outside of that directory.",
+        "status": "NOT_FOUND",
+        "id": "CWE-36"
+      },
+      {
+        "storyPoint": 8,
+        "severity": "mandatory",
+        "category": "File & Path Security",
+        "name": "Unrestricted Upload of File with Dangerous Type",
+        "evidence": {
+          "files": [
+            "src/Api/Vault/Controllers/CiphersController.cs:1316",
+            "src/Api/Vault/Controllers/CiphersController.cs:1385"
+          ],
+          "explanation": "The cipher attachment upload endpoints (PostAttachment at line 1316 and PostFileForExistingAttachment at line 1385 in CiphersController.cs) accept file uploads without validating the file type or content type. Only file size is enforced (MAX_FILE_SIZE). No MIME type whitelist or file extension restrictions are applied, allowing any file type to be uploaded."
+        },
+        "description": "The product allows the upload or transfer of dangerous file types that are automatically processed within its environment.",
+        "status": "FOUND",
+        "id": "CWE-434"
+      },
+      {
+        "storyPoint": 5,
+        "severity": "optional",
+        "category": "File & Path Security",
+        "name": "Improper Restriction of XML External Entity Reference",
+        "evidence": {
+          "files": [
+            "bitwarden_license/src/Sso/Utilities/Saml2OptionsExtensions.cs:53"
+          ],
+          "explanation": "XmlHelpers.XmlDocumentFromString() from the Sustainsys.Saml2 library is called at lines 53 and 68 to parse user-controlled SAML XML responses. No explicit DTD disabling or external entity restrictions are set in the Bitwarden code itself. The safety depends entirely on the Sustainsys.Saml2 library's internal implementation."
+        },
+        "description": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+        "status": "FOUND",
+        "id": "CWE-611"
+      }
+    ],
+    "finding": "Assessed 5 CWE rules in File & Path Security: 2 FOUND, 3 NOT_FOUND",
+    "confidence": "high",
+    "evidence": [
+      "Scanned application source files for file & path security patterns"
+    ]
+  },
+  "input_name": "CWE - File & Path Security"
+}

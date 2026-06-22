@@ -2,11 +2,11 @@
   "version": 1,
   "dependencies": {
     "net10.0": {
-      "Aspire.Dashboard.Sdk.osx-arm64": {
+      "Aspire.Dashboard.Sdk.win-x64": {
         "type": "Direct",
         "requested": "[13.3.4, 13.3.4]",
         "resolved": "13.3.4",
-        "contentHash": "/N0TO/oXBzlMzNwhwBOU2rNVnoj64dBEtJm5PklqmXP1m2qZCxP69hr19AR/bDYX9Wuzu1oKnZlFUSBiQMVmhA=="
+        "contentHash": "mJec0F0DdnYRiTHLKSjSBM9PPa+rh+Ali2SLsA0JSeve5LoAkWUFdqAOyy2JUFGCxkEZIU42SisFh8u3vtOvBw=="
       },
       "Aspire.Hosting.AppHost": {
         "type": "Direct",
@@ -125,11 +125,11 @@
           "System.IO.Hashing": "10.0.3"
         }
       },
-      "Aspire.Hosting.Orchestration.osx-arm64": {
+      "Aspire.Hosting.Orchestration.win-x64": {
         "type": "Direct",
         "requested": "[13.3.4, 13.3.4]",
         "resolved": "13.3.4",
-        "contentHash": "P41XojXdQdZOL80axrp5N7B6Wd3gOsKTEJGfzXFeOhYAXd2TE717HQoSeKbOWR9dRgYC9egey09Re1zKoKn8Jw=="
+        "contentHash": "2RorsDEA9OFSwtHQ8V5bteCz/hac/49L61EOFdXEpza0hkU308mcgq7mRxbrvoZnU9SL262fm2MIZ/XfNQRvew=="
       },
       "Aspire.Hosting.SqlServer": {
         "type": "Direct",
