@@ -1,0 +1,3 @@
+analysisCoverage: issue-only
+security:
+  minimumCveSeverity: high

@@ -1,0 +1,202 @@
+{
+  "ProjectPath": ".",
+  "Summary": {
+    "CweCount": 10,
+    "CveCount": 4,
+    "TotalFindings": 14,
+    "BySeverity": {
+      "mandatory": 5,
+      "potential": 5,
+      "optional": 4
+    },
+    "TotalRulesAssessed": 59,
+    "ByCategory": {
+      "File & Path Security": 2,
+      "CVE": 4,
+      "Code Quality": 3,
+      "Injection Attacks": 2,
+      "Concurrency & Synchronization": 2,
+      "Credentials & Secrets": 1
+    },
+    "RulesPassed": 49
+  },
+  "CveFindings": [
+    {
+      "Category": "CVE",
+      "Files": [
+        "src/Infrastructure.EntityFramework/Infrastructure.EntityFramework.csproj:14"
+      ],
+      "Severity": "mandatory",
+      "Description": "[CVE-2025-6965](https://github.com/advisories/GHSA-2m69-gcr7-jv3q): SQLitePCLRaw.lib.e_sqlite3 has a vulnerable dependency on SQLite\n\nSeverity: HIGH\n\nAffected dependencies:\n  - SQLitePCLRaw.lib.e_sqlite3:2.1.6 (transitive, pulled by Microsoft.EntityFrameworkCore.Sqlite at src/Infrastructure.EntityFramework/Infrastructure.EntityFramework.csproj:14)\n\nRecommended fix:\n  - No patched version of SQLitePCLRaw.lib.e_sqlite3 is currently available. Monitor upstream for an update beyond 2.1.11.",
+      "Id": "CVE-2025-6965",
+      "Name": "SQLitePCLRaw.lib.e_sqlite3 has a vulnerable dependency on SQLite",
+      "Explanation": "[CVE-2025-6965](https://github.com/advisories/GHSA-2m69-gcr7-jv3q): SQLitePCLRaw.lib.e_sqlite3 has a vulnerable dependency on SQLite\n\nSeverity: HIGH\n\nAffected dependencies:\n  - SQLitePCLRaw.lib.e_sqlite3:2.1.6 (transitive, pulled by Microsoft.EntityFrameworkCore.Sqlite at src/Infrastructure.EntityFramework/Infrastructure.EntityFramework.csproj:14)\n\nRecommended fix:\n  - No patched version of SQLitePCLRaw.lib.e_sqlite3 is currently available. Monitor upstream for an update beyond 2.1.11.",
+      "StoryPoint": 1
+    },
+    {
+      "Category": "CVE",
+      "Files": [
+        "src/Infrastructure.EntityFramework/Infrastructure.EntityFramework.csproj:9",
+        "bitwarden_license/src/Commercial.Infrastructure.EntityFramework/Commercial.Infrastructure.EntityFramework.csproj:7"
+      ],
+      "Severity": "mandatory",
+      "Description": "[CVE-2026-32933](https://github.com/advisories/GHSA-rvv3-g6hj-g44x): AutoMapper Vulnerable to Denial of Service (DoS) via Uncontrolled Recursion\n\nSeverity: HIGH\n\nAffected dependencies:\n  - AutoMapper:14.0.0 (declared at src/Infrastructure.EntityFramework/Infrastructure.EntityFramework.csproj:9)\n  - AutoMapper:14.0.0 (declared at bitwarden_license/src/Commercial.Infrastructure.EntityFramework/Commercial.Infrastructure.EntityFramework.csproj:7)\n\nNote: This advisory is suppressed via NuGetAuditSuppress in Infrastructure.EntityFramework.csproj.\n\nRecommended fix:\n  - Upgrade AutoMapper to 15.1.1 or later.",
+      "Id": "CVE-2026-32933",
+      "Name": "AutoMapper Vulnerable to Denial of Service (DoS) via Uncontrolled Recursion",
+      "Explanation": "[CVE-2026-32933](https://github.com/advisories/GHSA-rvv3-g6hj-g44x): AutoMapper Vulnerable to Denial of Service (DoS) via Uncontrolled Recursion\n\nSeverity: HIGH\n\nAffected dependencies:\n  - AutoMapper:14.0.0 (declared at src/Infrastructure.EntityFramework/Infrastructure.EntityFramework.csproj:9)\n  - AutoMapper:14.0.0 (declared at bitwarden_license/src/Commercial.Infrastructure.EntityFramework/Commercial.Infrastructure.EntityFramework.csproj:7)\n\nNote: This advisory is suppressed via NuGetAuditSuppress in Infrastructure.EntityFramework.csproj.\n\nRecommended fix:\n  - Upgrade AutoMapper to 15.1.1 or later.",
+      "StoryPoint": 1
+    },
+    {
+      "Category": "CVE",
+      "Files": [
+        "src/Notifications/Notifications.csproj:11"
+      ],
+      "Severity": "mandatory",
+      "Description": "[CVE-2026-45591](https://github.com/advisories/GHSA-f8h2-vmm9-qhj6): Microsoft Security Advisory CVE-2026-45591 - ASP.NET Core Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.AspNetCore.SignalR.Protocols.MessagePack:10.0.8 (declared at src/Notifications/Notifications.csproj:11)\n\nRecommended fix:\n  - Upgrade Microsoft.AspNetCore.SignalR.Protocols.MessagePack to 10.0.9 or later.",
+      "Id": "CVE-2026-45591",
+      "Name": "Microsoft Security Advisory CVE-2026-45591 - ASP.NET Core Denial of Service Vulnerability",
+      "Explanation": "[CVE-2026-45591](https://github.com/advisories/GHSA-f8h2-vmm9-qhj6): Microsoft Security Advisory CVE-2026-45591 - ASP.NET Core Denial of Service Vulnerability\n\nSeverity: HIGH\n\nAffected dependencies:\n  - Microsoft.AspNetCore.SignalR.Protocols.MessagePack:10.0.8 (declared at src/Notifications/Notifications.csproj:11)\n\nRecommended fix:\n  - Upgrade Microsoft.AspNetCore.SignalR.Protocols.MessagePack to 10.0.9 or later.",
+      "StoryPoint": 1
+    },
+    {
+      "Category": "CVE",
+      "Files": [
+        "AppHost/AppHost.csproj:17"
+      ],
+      "Severity": "mandatory",
+      "Description": "[CVE-2026-48109](https://github.com/advisories/GHSA-hv8m-jj95-wg3x): MessagePack's LZ4 decompression may fail with AccessViolationException after dereferencing memory from bad input\n\nSeverity: HIGH\n\nAffected dependencies:\n  - MessagePack:2.5.192 (transitive, pulled by Aspire.Hosting.AppHost at AppHost/AppHost.csproj:17)\n\nRecommended fix:\n  - Upgrade MessagePack to 2.5.301 or later (or 3.1.7+ for the v3 series).",
+      "Id": "CVE-2026-48109",
+      "Name": "MessagePack's LZ4 decompression may fail with AccessViolationException after dereferencing memory from bad input",
+      "Explanation": "[CVE-2026-48109](https://github.com/advisories/GHSA-hv8m-jj95-wg3x): MessagePack's LZ4 decompression may fail with AccessViolationException after dereferencing memory from bad input\n\nSeverity: HIGH\n\nAffected dependencies:\n  - MessagePack:2.5.192 (transitive, pulled by Aspire.Hosting.AppHost at AppHost/AppHost.csproj:17)\n\nRecommended fix:\n  - Upgrade MessagePack to 2.5.301 or later (or 3.1.7+ for the v3 series).",
+      "StoryPoint": 1
+    }
+  ],
+  "CweFindings": [
+    {
+      "Category": "Code Quality",
+      "Files": [
+        "src/Api/Controllers/SelfHosted/SelfHostedOrganizationLicensesController.cs:131",
+        "src/Admin/Models/UserEditModel.cs:51",
+        "src/Admin/AdminConsole/Models/OrganizationEditModel.cs:123",
+        "src/Core/Auth/UserFeatures/TwoFactorAuth/Implementations/CompleteTwoFactorWebAuthnRegistrationCommand.cs:74",
+        "src/Api/Dirt/Controllers/HibpController.cs:31"
+      ],
+      "Severity": "optional",
+      "Description": "The code uses deprecated or obsolete functions, which suggests that the code has not been actively reviewed or maintained.",
+      "Id": "CWE-477",
+      "Name": "Use of Obsolete Function",
+      "Explanation": "Multiple instances of DateTime.Now (which returns local time) used instead of DateTimeOffset.UtcNow (e.g., SelfHostedOrganizationLicensesController.cs:131, UserEditModel.cs:51, OrganizationEditModel.cs:123, CompleteTwoFactorWebAuthnRegistrationCommand.cs:74). Additionally, HibpController.cs:31 directly instantiates HttpClient via 'new HttpClient()' in a static constructor rather than using IHttpClientFactory, an obsolete/discouraged pattern in modern .NET.",
+      "StoryPoint": 1
+    },
+    {
+      "Category": "Code Quality",
+      "Files": [
+        "bitwarden_license/src/Sso/Utilities/Saml2OptionsExtensions.cs:69"
+      ],
+      "Severity": "potential",
+      "Description": "When converting from one data type to another, such as long to integer, data can be omitted or translated in a way that produces unexpected values. If the resulting values are used in a sensitive context, then dangerous behaviors may occur.",
+      "Id": "CWE-681",
+      "Name": "Incorrect Conversion between Numeric Types",
+      "Explanation": "At line 69, MemoryStream.Length (a long) is cast to int without bounds checking: '(int)deCompressed.Length'. If a decompressed SAML payload exceeds Int32.MaxValue (~2GB), this unchecked narrowing cast would silently overflow, causing incorrect string length extraction from a user-controlled SAML request/response.",
+      "StoryPoint": 3
+    },
+    {
+      "Category": "Code Quality",
+      "Files": [
+        "src/Core/Utilities/SystemTextJsonCosmosSerializer.cs:38"
+      ],
+      "Severity": "potential",
+      "Description": "The product does not release a file descriptor or handle after its effective lifetime has ended, i.e., after the file descriptor/handle is no longer needed.",
+      "Id": "CWE-775",
+      "Name": "Missing Release of File Descriptor or Handle after Effective Lifetime",
+      "Explanation": "At line 38, a MemoryStream is created without a 'using' statement and is returned to the caller from ToStream<T>(). The caller (Cosmos SDK) is expected to dispose it, but no contract enforces this, creating a potential resource leak if the SDK does not properly dispose the returned stream.",
+      "StoryPoint": 3
+    },
+    {
+      "Category": "Concurrency & Synchronization",
+      "Files": [
+        "src/Core/Platform/Push/NotificationHub/NotificationHubConnection.cs:32"
+      ],
+      "Severity": "potential",
+      "Description": "The product uses the singleton pattern when creating a resource within a multithreaded environment.",
+      "Id": "CWE-543",
+      "Name": "Use of Singleton Pattern Without Synchronization in a Multithreaded Context",
+      "Explanation": "The HubClient property getter at lines 32-46 implements a lazy-initialization singleton pattern without synchronization. It checks 'if (_hubClient == null)' and then calls Init() without any lock. In a multithreaded ASP.NET Core environment, concurrent requests could observe _hubClient as null simultaneously, causing multiple calls to NotificationHubClient.CreateClientFromConnectionString(), creating duplicate clients. The field is also not marked volatile, so visibility guarantees are absent.",
+      "StoryPoint": 5
+    },
+    {
+      "Category": "Concurrency & Synchronization",
+      "Files": [
+        "src/Api/Dirt/Controllers/HibpController.cs:22"
+      ],
+      "Severity": "potential",
+      "Description": "The product does not properly synchronize shared data, such as static variables across threads, which can lead to undefined behavior and unpredictable data changes.",
+      "Id": "CWE-567",
+      "Name": "Unsynchronized Access to Shared Data in a Multithreaded Context",
+      "Explanation": "HibpController declares 'private static HttpClient _httpClient' (line 22) as a non-readonly mutable static field. While it is only written once in the static constructor, it is not marked as readonly or volatile. Static mutable fields shared across requests without synchronization can cause issues in highly concurrent scenarios if the field were ever reassigned.",
+      "StoryPoint": 5
+    },
+    {
+      "Category": "Credentials & Secrets",
+      "Files": [
+        "src/Core/Services/Implementations/UserService.cs:282"
+      ],
+      "Severity": "potential",
+      "Description": "When a security-critical event occurs, the product either does not record the event or omits important details about the event when logging it.",
+      "Id": "CWE-778",
+      "Name": "Insufficient Logging",
+      "Explanation": "At lines 282-283 in UserService.DeleteUserAsync, GatewayException and BillingException are silently caught and discarded with empty catch blocks during user account deletion. Billing errors in a security-critical operation (account deletion) are not logged, making it impossible to audit or investigate billing-related failures during user removal.",
+      "StoryPoint": 3
+    },
+    {
+      "Category": "File & Path Security",
+      "Files": [
+        "src/Api/Vault/Controllers/CiphersController.cs:1316",
+        "src/Api/Vault/Controllers/CiphersController.cs:1385"
+      ],
+      "Severity": "mandatory",
+      "Description": "The product allows the upload or transfer of dangerous file types that are automatically processed within its environment.",
+      "Id": "CWE-434",
+      "Name": "Unrestricted Upload of File with Dangerous Type",
+      "Explanation": "The cipher attachment upload endpoints (PostAttachment at line 1316 and PostFileForExistingAttachment at line 1385 in CiphersController.cs) accept file uploads without validating the file type or content type. Only file size is enforced (MAX_FILE_SIZE). No MIME type whitelist or file extension restrictions are applied, allowing any file type to be uploaded.",
+      "StoryPoint": 8
+    },
+    {
+      "Category": "File & Path Security",
+      "Files": [
+        "bitwarden_license/src/Sso/Utilities/Saml2OptionsExtensions.cs:53"
+      ],
+      "Severity": "optional",
+      "Description": "The product processes an XML document that can contain XML entities with URIs that resolve to documents outside of the intended sphere of control, causing the product to embed incorrect documents into its output.",
+      "Id": "CWE-611",
+      "Name": "Improper Restriction of XML External Entity Reference",
+      "Explanation": "XmlHelpers.XmlDocumentFromString() from the Sustainsys.Saml2 library is called at lines 53 and 68 to parse user-controlled SAML XML responses. No explicit DTD disabling or external entity restrictions are set in the Bitwarden code itself. The safety depends entirely on the Sustainsys.Saml2 library's internal implementation.",
+      "StoryPoint": 5
+    },
+    {
+      "Category": "Injection Attacks",
+      "Files": [
+        "bitwarden_license/src/Sso/Views/Shared/Error.cshtml:10"
+      ],
+      "Severity": "optional",
+      "Description": "The product does not neutralize or incorrectly neutralizes user-controllable input before it is placed in output that is used as a web page that is served to other users.",
+      "Id": "CWE-79",
+      "Name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+      "Explanation": "At line 10 of Error.cshtml, the user-controlled SSO redirect URI (Model?.RedirectUri) is embedded in a translated string via i18nService.T() and then rendered without encoding using @Html.Raw(). If the redirect URI contains HTML special characters or script tags, this results in a reflected XSS vulnerability in the SSO error page.",
+      "StoryPoint": 8
+    },
+    {
+      "Category": "Injection Attacks",
+      "Files": [
+        "bitwarden_license/src/Sso/Utilities/Saml2OptionsExtensions.cs:53"
+      ],
+      "Severity": "optional",
+      "Description": "The product does not properly neutralize special elements that are used in XML, allowing attackers to modify the syntax, content, or commands of the XML before it is processed by an end system.",
+      "Id": "CWE-91",
+      "Name": "XML Injection (aka Blind XPath Injection)",
+      "Explanation": "At lines 53 and 68, XmlHelpers.XmlDocumentFromString() from the Sustainsys.Saml2 library is used to parse SAML request/response XML that originates from user-controlled HTTP parameters (SAMLRequest/SAMLResponse). No explicit XML neutralization is applied in the Bitwarden code before parsing, relying entirely on the Sustainsys library's protections.",
+      "StoryPoint": 5
+    }
+  ],
+  "GeneratedAt": "2026-06-22T07:48:07.0000000Z"
+}
